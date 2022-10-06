@@ -28,4 +28,10 @@ public abstract class Observable {
             observer.update();
         }
     }
+
+    public void notifyObservers(Object param) {
+        for (IObserver observer : observers) {
+            observer.update();
+        }
+    }
 }

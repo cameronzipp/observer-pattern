@@ -1,13 +1,13 @@
 package observable;
 
-public class WildernessAnimal extends Observable {
+public class Mountain extends Observable {
 
     private String type;
-    private String location;
+    private boolean snowCap;
 
-    public WildernessAnimal(String type, String location) {
+    public Mountain(String type, boolean snowCap) {
         this.type = type;
-        this.location = location;
+        this.snowCap = snowCap;
     }
 
     public String getType() {
@@ -18,17 +18,17 @@ public class WildernessAnimal extends Observable {
         this.type = type;
     }
 
-    public String getLocation() {
-        return location;
+    public boolean isSnowCap() {
+        return snowCap;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setSnowCap(boolean snowCap) {
+        this.snowCap = snowCap;
     }
 
     public void performAction(String actionMessage) {
         //Simulates something interesting happening. Should let observers know about it
-        System.out.println("The " + type + " animal did something");
+        System.out.println("The " + type + " mountain did something");
         notifyObservers(); //this is from the parent class
     }
 }

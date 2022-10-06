@@ -17,7 +17,7 @@ public class Hiker implements IObserver {
     }
 
     @Override
-    public void update() { //called by observable objects'
-        System.out.println("The hiker noticed something!");
+    public void update() { //called by observable objects
+        System.out.println("The hiker noticed something");
     }
 }
